@@ -1,10 +1,14 @@
 <?php
-function fechaActual($format)
-{
-    return date($format);
+if (!function_exists('fechaActual')) {
+	function fechaActual($format)
+	{
+		return date($format);
+	}
 }
 
-function setActivo($nombreRuta)
-{
-	return request()->routeIs($nombreRuta) ? 'active' : '';
+if (!function_exists('setActivo')) {
+	function setActivo($nombreRuta)
+	{
+		return request()->routeIs($nombreRuta) ? 'active' : '';
+	}
 }
